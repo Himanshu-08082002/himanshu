@@ -1,0 +1,32 @@
+#include<stdio.h>
+int fibonacci(int n)
+{
+ int i,a=0,b=1,c;
+ if(a==n||b==n)
+ {
+ printf("element is present in fibonacci series");
+ return 0;
+}
+c=a+b;
+ while(c<=n)
+ {
+ c=a+b;
+ if(c==n)
+ {
+ printf("element is present in fibonacci series");
+ return 0;
+ }
+ a=b;
+ b=c;
+ }
+ printf("element not present in fibonacci series");
+ return 0;
+}
+int main()
+{ 
+ int n;
+ printf("enter the no to be searched in fibonacci series\n");
+ scanf("%d",&n);
+ fibonacci(n);
+ return 0;
+ }
